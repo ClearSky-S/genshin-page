@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 export default function Characters() {
-  let {characterId} = useParams();
+  let {characterSlug} = useParams();
   return (
     <div id="contact">
-        character {characterId}
+        <Link to={"../characters/aloy"}>{"aloy"}</Link>
+        character {characterSlug}
     </div>
   );
 }

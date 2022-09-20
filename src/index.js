@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from "./routes/root";
+import CharacterSelection from "./routes/character-selection"
 import Characters from "./routes/characters";
 import Elements from "./routes/elements";
 import Nations from "./routes/nations";
@@ -22,10 +23,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "characters",
-        element: <Characters />,
+        element: <CharacterSelection />,
       },
       {
-        path: "characters/:characterId",
+        path: "characters/:characterSlug",
         element: <Characters />,
       },
       {
