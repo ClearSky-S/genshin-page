@@ -2,45 +2,18 @@ import { Outlet, Link } from "react-router-dom";
 export default function Root() {
     return (
       <>
-        <div id="sidebar">
-          <h1>React Router Contacts</h1>
-          <div>
-            <form id="search-form" role="search">
-              <input
-                id="q"
-                aria-label="Search contacts"
-                placeholder="Search"
-                type="search"
-                name="q"
-              />
-              <div
-                id="search-spinner"
-                aria-hidden
-                hidden={true}
-              />
-              <div
-                className="sr-only"
-                aria-live="polite"
-              ></div>
-            </form>
-            <form method="post">
-              <button type="submit">New</button>
-            </form>
-          </div>
-          <nav>
-          <ul>
-            <li>
-              <Link to={`contacts/1`}>Your Name</Link>
-            </li>
-            <li>
-              <Link to={`contacts/2`}>Your Friend</Link>
-            </li>
-          </ul>
-          </nav>
-        </div>
-        <div id="detail">
+        <h1>Genshin Info</h1>
+
+        <nav>
+        <ul> 
+          <li><Link to={`characters/1`}>characters</Link></li>
+          <li><Link to={`elements/1`}>elements</Link></li>
+          <li><Link to={`nations/1`}>nations</Link></li>
+          <li><Link to={`weapons/1`}>weapons</Link></li>
+        </ul>
+        </nav>
+        
         <Outlet />
-      </div>
       </>
     );
   }

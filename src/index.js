@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
 } from "react-router-dom";
 import Root from "./routes/root";
-import Contact from "./routes/contact";
+import Characters from "./routes/characters";
+import Elements from "./routes/elements";
+import Nations from "./routes/nations";
+import Weapons from "./routes/weapons";
 import ErrorPage from "./error-page";
 
 
@@ -20,8 +21,28 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "contacts/:contactId",
-        element: <Contact />,
+        path: "characters",
+        element: <Characters />,
+      },
+      {
+        path: "characters/:characterId",
+        element: <Characters />,
+      },
+      {
+        path: "elements/:elementId",
+        element: <Elements />,
+      },
+      {
+        path: "nations/:nationId",
+        element: <Nations />,
+      },
+      {
+        path: "weapons",
+        element: <Weapons />,
+      },
+      {
+        path: "weapons/:weaponId",
+        element: <Weapons />,
       },
     ]
   },
@@ -31,7 +52,6 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
     <RouterProvider router={router} />
   </React.StrictMode>
 );
