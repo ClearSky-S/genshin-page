@@ -2,7 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 export default function Root() {
   return (
     <>
-      <nav id="rootNav" class="navbar sticky-top navbar-light">
+      <nav id="rootNav" class="navbar navbar-expand-sm sticky-top navbar-light">
         <div class="container-fluid">
         <Link to={`/`} className="navbar-brand">Genshin Info</Link>
           <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
