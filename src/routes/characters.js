@@ -11,7 +11,7 @@ export default function Characters() {
         // console.log(res.data);
         setCharacterData(res.data);
       })
-  }, []);
+  }, [characterSlug]);
   // console.log(characterData);
   return (
     <div>
@@ -20,7 +20,7 @@ export default function Characters() {
         <>
           <h2>{characterData.name}</h2>
           <h3>{characterData.title}</h3>
-          <img src={"https://api.genshin.dev/characters/"+characterSlug+"/icon"}></img>
+          <img src={"https://api.genshin.dev/characters/"+characterSlug+"/icon"} alt={characterSlug}></img>
           <p>{characterData.description}</p>
           <div>Vision {characterData.vision}</div>
         </>
