@@ -7,7 +7,7 @@ export default function CharacterSelection() {
     useEffect(() => {
         axios.get('https://api.genshin.dev/characters')
             .then((res) => {
-                console.log(res.data);
+                // console.log(res.data);
                 setcharacterListData(res.data);
             })
     }, [])
