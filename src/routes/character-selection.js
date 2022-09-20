@@ -21,7 +21,7 @@ export default function CharacterSelection() {
     );
 
     return (
-        <div id="contact">
+        <div>
             <ul>
                 {characterList}
             </ul>

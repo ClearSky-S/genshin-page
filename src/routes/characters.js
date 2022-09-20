@@ -14,7 +14,7 @@ export default function Characters() {
   }, []);
   // console.log(characterData);
   return (
-    <div id="contact">
+    <div>
       <Link to={"../characters"}>Character Selection</Link>
       {characterData ?
         <>
