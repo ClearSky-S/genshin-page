@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 
 export default function CharacterSelection() {
-    const [characterListData, setcharacterListData] = useState();
+    const [characterListData, setCharacterListData] = useState();
     useEffect(() => {
         axios.get('https://api.genshin.dev/characters')
             .then((res) => {
                 // console.log(res.data);
-                setcharacterListData(res.data);
+                setCharacterListData(res.data);
             })
-    }, [])
+    }, []);
     const characterList = 
     !characterListData
     ?null
